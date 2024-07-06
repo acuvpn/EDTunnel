@@ -16,7 +16,7 @@ on:
         required: false
         type: string
         default: 873533aa-8d06-4fc0-a888-ef5e9fa764aa
-      PROXYIP:
+      proxyip:
         description: "Valid IP proxy"
         required: true
         type: string
@@ -39,9 +39,9 @@ jobs:
               [[ "${UUID}" == "auto" ]] && UUID=$(uuidgen -r)
               echo "[+] UUID: ${UUID}"
               sed -i "s/%uuid%/${UUID}/g" ./wrangler.toml
-              PROXYIP=${{ github.event.inputs.PROXYIP }}
-              echo "[+] PROXYIP: ${PROXYIP}"
-              sed -i "s/%proxyip%/${PROXYIP}/g" ./wrangler.toml
+              proxyip=${{ github.event.inputs.proxyip }}
+              echo "[+] proxyip: ${proxyip}"
+              sed -i "s/%proxyip%/${proxyip}/g" ./wrangler.toml
           - name: Deploy app
             uses: cloudflare/wrangler-action@v3
             with:
