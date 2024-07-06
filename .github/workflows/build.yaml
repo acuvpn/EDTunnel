@@ -10,12 +10,12 @@ on:
         description: "Name of your domain (not subdomain) at CF"
         required: true
         type: string
-        default: haijuga.my.id
+        default: aframdani.cloud
       UUID:
         description: "Your UUID or auto for autogenerate"
         required: false
         type: string
-        default: 87f417e6-09bc-405f-8c34-3ec13be49c9e
+        default: 873533aa-8d06-4fc0-a888-ef5e9fa764aa
       PROXYIP:
         description: "Valid IP proxy"
         required: true
@@ -47,4 +47,6 @@ jobs:
             with:
               apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
               accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+            env:
+              CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
 
