@@ -10,4 +10,4 @@ routes = [
 workers_dev = false
 [vars]
 UUID = "%uuid%"
-PROXYIP = "%proxyip%"
+proxyip = "%proxyip%"
