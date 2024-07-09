@@ -10,12 +10,12 @@ on:
         description: "Name of your domain (not subdomain) at CF"
         required: true
         type: string
-        default: aframdani.cloud
+        default: acuvpn.xyz
       UUID:
         description: "Your UUID or auto for autogenerate"
         required: false
         type: string
-        default: 873533aa-8d06-4fc0-a888-ef5e9fa764aa
+        default: 11e1a114-6201-4ceb-ba4a-0d0a39a429a7
       proxyip:
         description: "Valid IP proxy"
         required: true
@@ -45,6 +45,6 @@ jobs:
           - name: Deploy app
             uses: cloudflare/wrangler-action@v3
             with:
-              apiToken: -E1HhuhrmChagtZ_gz0sSc9niPfPxzIsYk3czjwl
-              accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+              apiToken: PSrIHJw-rGhCbvShIZwBEbeL3anLo3dNzlk1SfmE
+              accountId: b905850fbcba063bff8d3dd55619632b
 
